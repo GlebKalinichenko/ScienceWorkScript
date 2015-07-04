@@ -1,6 +1,9 @@
 <?php
-	$mysqli = new mysqli("127.0.1.1", "root", "1111", "ScienceWorks");
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+	$mysqli = new mysqli("localhost", "root", "1111", "ScienceWorks");
     $data = array();
+    $mysqli->query('SET NAMES UTF8');
 	$result = $mysqli->query("SELECT * FROM Countries");
     	if ($result->num_rows > 0) {
  	   // output data of each row
